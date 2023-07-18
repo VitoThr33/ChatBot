@@ -12,7 +12,7 @@ export const TextToSpeech = () => {
     
     
 
-	const seletedVoice = voices?.find((voice) => voice.name === "Microsoft Mitchell Online (Natural) - English (New Zealand)"); // Other voice that sounds good Karen, Tessa, Trinoids
+	const seletedVoice = voices?.find((voice) => voice.name === "Microsoft Mitchell Online (Natural) - English (New Zealand)"); 
 
 	const speak = (textToSpeak: string) => {
 		const utterance = new SpeechSynthesisUtterance(textToSpeak);
@@ -34,7 +34,7 @@ export const TextToSpeech = () => {
         } catch (error) {
             let message = "";
             if(error instanceof Error) message = error.message;
-            console.log(message);
+           
         } finally {
             setIsLoading(false);
             setUserText("");
